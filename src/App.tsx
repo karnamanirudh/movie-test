@@ -32,7 +32,7 @@ function App() {
   useEffect(() => {
     topMovies.map(movie => {
       return (
-        fetch('http://www.omdbapi.com/?apikey=ef69a2eb&t=' + movie)
+        fetch('https://www.omdbapi.com/?apikey=ef69a2eb&t=' + movie)
           .then(res => res.json())
           .then(data => getData(movies => movies.concat(data)))
       )
@@ -42,7 +42,7 @@ function App() {
 
   const getInputData = (inputString: string) => {
     setInputData(inputString);
-    let url = 'http://www.omdbapi.com/?apikey=ef69a2eb&t=' + inputString;
+    let url = 'https://www.omdbapi.com/?apikey=ef69a2eb&t=' + inputString;
     fetch(url)
       .then(res => res.json())
       .then(data => getSearchResults(data))
