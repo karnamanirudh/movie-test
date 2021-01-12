@@ -13,15 +13,14 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movies-list {
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 1em;
 }
 
 .App-link {
@@ -35,4 +34,27 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.poster{
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.3em;
+}
+
+.movie-list{
+  margin-top: 2em;
+}
+
+.user-input{
+  width: 85% !important;
+}
+
+.search-field{
+  display: flex;
+}
+
+.btn{
+    margin-left: 1em;
 }
