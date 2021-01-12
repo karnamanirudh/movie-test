@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { Input, Button } from 'reactstrap';
 
 interface FunctionProps {
-    inputFieldData( arg: string) : void
+    inputFieldData(arg: string): void
 }
 
-const SearchField : React.FC<FunctionProps> = (props) => {
+const SearchField: React.FC<FunctionProps> = (props) => {
 
     const [userInput, getUserInput] = useState('');
 
-    const getUserData = (e: React.ChangeEvent<HTMLInputElement>)   => {
+    const getUserData = (e: React.ChangeEvent<HTMLInputElement>) => {
         getUserInput(e.target.value);
     }
 
@@ -17,9 +17,15 @@ const SearchField : React.FC<FunctionProps> = (props) => {
         props.inputFieldData(userInput);
     }
 
-    return(
+    const searchMoviesOnKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            props.inputFieldData(userInput);
+        }
+    }
+
+    return (
         <div className='search-field'>
-            <Input autoFocus onChange={(e) => getUserData(e)} value={userInput} placeholder='Enter Movie Name' className='user-input'/>
+            <Input autoFocus onKeyPress={(e) => searchMoviesOnKeyPress(e)} onChange={(e) => getUserData(e)} value={userInput} placeholder='Enter Movie Name' className='user-input' />
             <Button outline color="primary" onClick={searchInputData} className='btn'>Search</Button>{' '}
         </div>
     )
