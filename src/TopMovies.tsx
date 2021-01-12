@@ -6,7 +6,6 @@ import {
 } from 'reactstrap';
 
 const TopMovies = (props: { movies: TopMoviesData[] }) => {
-    console.log(props.movies)
     return (
         <div className='movie-list' id='movies-section'>
             <Container>
