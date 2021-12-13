@@ -1,3 +1,6 @@
+
+<a href="https://app.daily.dev/anirudhvk"><img src="https://api.daily.dev/devcards/65dd7381e18a497bbb17f6662a2c2558.png?r=jgo" width="300"  height="400" alt="Anirudh V K's Dev Card"/></a>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
